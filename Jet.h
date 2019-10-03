@@ -11,7 +11,7 @@ private:
 public:
     Jet();
 
-    explicit Jet(int, string);
+    explicit Jet(string, string, string, int);
 
     virtual ~Jet();
     int getEngineNum();

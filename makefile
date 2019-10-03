@@ -1,9 +1,9 @@
 ### Andres Gonzalez || CEN4020 || Assignment 2 ###
 
-roleGame: main.o Vehicle.o PoweredVehicle.o Car.o Bicycle.o 
-	g++ -std=c++11 -o roleGame main.o Vehicle.o PoweredVehicle.o Car.o Bicycle.o
+roleGame: main.o Vehicle.o PoweredVehicle.o Car.o Bicycle.o Jet.o 
+	g++ -std=c++11 -o roleGame main.o Vehicle.o PoweredVehicle.o Car.o Bicycle.o Jet.o
 
-main.o: main.cpp Vehicle.h PoweredVehicle.h Bicycle.h Car.h
+main.o: main.cpp Vehicle.h PoweredVehicle.h Bicycle.h Car.h Jet.h
 	g++ -std=c++11 -c main.cpp
 
 Vehicle.o: Vehicle.cpp Vehicle.h
@@ -18,5 +18,8 @@ Car.o: Car.cpp Car.h
 Bicycle.o: Bicycle.cpp Bicycle.h
 	g++ -std=c++11 -c Bicycle.cpp
 
+Jet.o: Jet.cpp Jet.h
+	g++ -std=c++11 -c Jet.cpp
+	
 clean:
 	rm *.o roleGame

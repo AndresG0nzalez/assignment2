@@ -7,12 +7,16 @@
 Jet::Jet() 
 {
     numberOfEngines = 1;
+    setBrand("Custom");
+    setModel("Custom");
 }
 
-Jet::Jet(int numEngines, string fuelType) 
+Jet::Jet(string brand, string model, string fuelType, int numEngines) 
 {
-    setEngineNum(numEngines);
+    setBrand(brand);
+    setModel(model);
     setFuelType(fuelType);
+    setEngineNum(numEngines);
 }
 
 Jet::~Jet() = default;
@@ -39,7 +43,7 @@ double Jet::mileageEstimate(double t)
     srand(time(0));
     int r = rand() % 100 + 40;
     double mileage = r * t;
-    if (numberOfEngines < 2) 
+    if (numberOfEngines > 2) 
     {
         mileage += mileage * 0.055;
     }
