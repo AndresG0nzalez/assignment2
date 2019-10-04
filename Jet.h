@@ -1,3 +1,5 @@
+//Andres Gonzalez || CEN4020 || Assignment 2
+
 #ifndef DRIVINGSIMULATOR_JET_H
 #define DRIVINGSIMULATOR_JET_H
 
@@ -20,6 +22,5 @@ public:
     virtual string toString();
 };
 
-
-#endif //DRIVINGSIMULATOR_JET_H
+#endif 
 
