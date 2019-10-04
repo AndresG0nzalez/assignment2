@@ -1,5 +1,8 @@
+//Andres Gonzalez || CEN4020 || Assignment 2
+
 #include "Skateboard.h"
 #include <cmath>
+#include <iomanip>
 #include <random> //for random_device, default_random_engine,
 		  //and uniform_real_distribution
 
@@ -26,10 +29,10 @@ double Skateboard::mileageEstimate(double t)
     double mileage = ranNum * t;
     if(t > 25 && t < 250)
     {
-	double frac = t/3;		//need to figure out whether to take floor(ranNUm)
+	double frac = t/3;		
     	random_device r2;
 	default_random_engine generator(r2());
-        uniform_real_distribution<double> distribution(1.0, frac);
+        uniform_real_distribution<double> distribution(1.0, frac); //num between 1 and 1/3 of time
 	double ranNum2 = distribution(generator);
 	mileage += ranNum2;
     }
@@ -37,6 +40,4 @@ double Skateboard::mileageEstimate(double t)
 }
 
 string Skateboard::toString()
-{
-    return "-> Skateboard\n" + Vehicle::toString();
-} 
+{ return "-> Skateboard\n" + Vehicle::toString(); } 

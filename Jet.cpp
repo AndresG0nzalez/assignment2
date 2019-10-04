@@ -44,9 +44,8 @@ double Jet::mileageEstimate(double t)
     int r = rand() % 100 + 40;
     double mileage = r * t;
     if (numberOfEngines > 2 && fuelType == "Rocket") 
-    {
-        mileage += mileage * 0.055;
-    }
+    	mileage += mileage * (getEngineNum() * 0.055);
+    
     return mileage;
 }
 
