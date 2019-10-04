@@ -43,7 +43,7 @@ double Jet::mileageEstimate(double t)
     srand(time(0));
     int r = rand() % 100 + 40;
     double mileage = r * t;
-    if (numberOfEngines > 2) 
+    if (numberOfEngines > 2 && fuelType == "Rocket") 
     {
         mileage += mileage * 0.055;
     }
