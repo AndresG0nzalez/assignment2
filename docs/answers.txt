@@ -1,0 +1,90 @@
+### Andres Gonzalez || CEN4020 || Assignment 2 ###
+
+(a) Paste the console output you saved at the end of step 3.C (2 points)
+
+*******************************************************************************
+Username for 'https://github.com': AndresG0nzalez Password for
+'https://AndresG0nzalez@github.com': Counting objects: 9, done.  Delta
+compression using up to 56 threads.  Compressing objects: 100% (5/5), done.
+Writing objects: 100% (7/7), 843 bytes | 0 bytes/s, done.  Total 7 (delta 2),
+reused 0 (delta 0) remote: Resolving deltas: 100% (2/2), completed with 1 local
+object.  To https://github.com/AndresG0nzalez/assignment2.git f4975e5..fe54fd5
+master -> master
+
+*******************************************************************************
+
+(b) How many commits have been done to the repository (not only by you, but by
+anyone) so far? Write the git command you used to get this information (4
+points)
+
+	9
+	> git log
+
+(c) When was the .gitignore file modified last? Write the git command you used
+to get this information (4 points)
+
+	Date:   Wed Sep 25 18:13:30 2019 -0400
+	> git log
+
+(d) Mention two reasons why branches are used in a Git repository (4 points) 1)
+Branching requires no storage or memory overhead because it uses pointers to
+track of commits 2) Branching also allows you to have multiple "branches" in
+order to create a so called "fork in the road", and allows you to work on the
+same file, but do different things to it. You also have the option to switch
+back and forth between branches  and merge them when you're ready.
+
+(e) What is the difference between git log and git status? (4 points)
+
+	Git log shows the commit logs and git status shows details of files that
+are in the working directory
+
+
+(f) What command would you use to see the commits where “Vehicle.h” was one of
+the committed files? (4 points)
+
+	> git log --follow "Vehicle.h"
+
+(g) What command would you use to see the commits whose commit message contains
+the word “file”? (4 points)
+
+	> git log --grep='file'
+
+(h) In the context of object-oriented programming (I) What is inheritance? (II)
+What is polymorphism? (III) What is encapsulation? (6 points)
+
+	1) Inheritance allows the childern classes to "inherit" functions and
+member data from there parent class.  2) Polymorphism allows functions from the
+different classes (related by inheritance) to use the same name, but be called
+based on the context of the function call. Using virtual fuctions, you can wait
+until compile time to decide which function from which class should be called
+based on the context of the fuction call.  3) Encapsulation is bundling up
+member functions and memeber data into a class type. With a class, you can
+protect certain data by specifying whether it will be public, private, or
+protected.
+
+(i) What is the main difference between the “Dictator and Lieutenants” workflow
+and the “Integration manager” workflow? (5 points)
+	
+	In a "Dictator and Lieutenants" workflow, only one person (the dictator)
+can push into the central repository.  In a "Integration Manager" workflow, each
+dev makes his/her own pushes and pulls.
+
+(j) How would a team of 100 developers benefit from following the “Dictator and
+Lieutenants” workflow instead of the “Centralized” workflow? (5 points)
+
+	Any potential merge conflicts are corrected in the lieutenant
+repositories before being pushed further into the dictator repository and then
+into the central repository. In other words, mistakes will most likely be
+filtered out before they get to the central repositories without the devs having
+to worry too much about it.
+
+OOP Principles:
+
+	We do in fact implement polymorphism and encapsulation in our driving
+simulator. Enapsulation is used becasue each vehicle object is wrapped inside
+its own class, with member data and member functions. Polymorphism is used
+because we are essentially overriding certain member functions such as the
+"mileageEstimate()" fuction to perform a different calculation depending on the
+vechile object specified in main.
+
+

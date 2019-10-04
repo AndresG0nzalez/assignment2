@@ -29,6 +29,6 @@ double Bicycle::mileageEstimate(double time) {
 
 string Bicycle::toString() {
     string s = "-> Bicycle\n\t";
-    return "-> Bicycle\n" + Vehicle::toString() + "\n\tGears: " +
-           to_string(myGearCount);
+    return "-> Bicycle\n" + Vehicle::toString() + "\n\tGears: " 
+	+ to_string(myGearCount);
 }
